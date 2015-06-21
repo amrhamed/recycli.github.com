@@ -1,5 +1,3 @@
-recycli
-================    
-
-sshs26/chemistry/computer
---------------------
+profile page
+===
+http://recycli.github.io/
