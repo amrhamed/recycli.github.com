@@ -5,9 +5,41 @@
     <description></description>
     <link>http://recycli.github.io//</link>
     <atom:link href="http://recycli.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 Sep 2015 16:12:45 +0900</pubDate>
-    <lastBuildDate>Thu, 24 Sep 2015 16:12:45 +0900</lastBuildDate>
+    <pubDate>Thu, 24 Sep 2015 16:42:00 +0900</pubDate>
+    <lastBuildDate>Thu, 24 Sep 2015 16:42:00 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>test article</title>
+        <description>&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+        MathJax.Hub.Config({tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]}});
+&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;테스트용 글&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Stochastic gradient descent is a gradient descent optimization method for minimizing an objective function that is written as a sum of differentiable functions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When used to minimize the above function, a standard (or “batch”) gradient descent method would perform the following iterations :&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;w:=w-\eta\sum_{i=1}^{n}{\nabla Q_i(w)}&lt;/script&gt;
+
+&lt;p&gt;잘나오는듯(만족!)&lt;/p&gt;
+</description>
+        <pubDate>Fri, 25 Sep 2015 01:35:32 +0900</pubDate>
+        <link>http://recycli.github.io//test/2015/09/25/test.html</link>
+        <guid isPermaLink="true">http://recycli.github.io//test/2015/09/25/test.html</guid>
+        
+        <category>test</category>
+        
+        
+        <category>test</category>
+        
+      </item>
     
   </channel>
 </rss>
