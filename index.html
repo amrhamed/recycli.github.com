@@ -1,98 +1,89 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+---
+layout: default
+---
+<div class="home">
 
-    <title>recycli</title>
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
+	<div class="scrim {% if site.cover %}has-cover{% endif %}">
+		<header class="site-header">
+		  <h1 class="title">{{ site.title }}</h1>
+		  {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
+		</header>
+	</div>
+</div>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nam Juno">
-    <meta name="author" content="wnsdh354@naver.com">
+<div class="wrapper">
+<ul class="post-list">
+  {% for post in paginator.posts %}
+  <li>
+    <h2>
+      <a class="post-link" href="{{ post.url | remove_first: '/' | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+    </section>
+    <section class="post-meta">
+    	<div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+    	<div class="post-categories">
+    	{% if post.categories %}in {% for cat in post.categories %}
+    	  {% if site.jekyll-archives %}
+    		<a href="{{ site.baseurl }}category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+    	  {% else %}
+    	  <span>{{ cat | capitalize }}</span>{% if forloop.last == false %}, {% endif %}
+    	  {% endif %}
+    	{% endfor %}{% endif %}
+    	</div>
+    </section>
+  </li>
+  {% if forloop.last == false %}
+  <hr>
+  {% endif %}
+  {% endfor %}
+</ul>
 
-    <!-- styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+<nav class="pagination" role="navigation">
+	<p>
+    {% if paginator.next_page %}
+    <a class="newer-posts" href="{{ site.baseurl }}page{{paginator.next_page}}">
+	    <span class="fa-stack fa-lg">
+			  <i class="fa fa-square fa-stack-2x"></i>
+			  <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
+    {% else %}
+    <span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+			<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+		</span>
+    {% endif %}
+    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.previous_page %}
+      {% if paginator.page == 2 %}
+      <a class="newer-posts" href="{{ site.baseurl }}">
+		    <span class="fa-stack fa-lg">
+				  <i class="fa fa-square fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+      {% else %}
+      <a class="newer-posts" href="{{ site.baseurl }}page{{paginator.previous_page}}">
+		    <span class="fa-stack fa-lg">
+				  <i class="fa fa-square fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+      {% endif %}
+    {% else %}
+    <span class="fa-stack fa-lg">
+		  <i class="fa fa-square fa-stack-2x"></i>
+		  <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+		</span>
+    {% endif %}
+  </p>
+  <p>
+    <a href="{{ site.baseurl }}posts">View All Posts by Category</a>
+  </p>
+</nav>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand">recycli</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="https://github.com/recycli" target="_blank">Github</a></li>
-            <li><a href="intro.html">Intro</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Link <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">기회</a></li>
-                <li><a href="#">찬스</a></li>
-                <li><a href="http://sshs.hs.kr" target="_blank"></a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-
-      <div class="jumbotron">
-        <h1>기회는 찬스다</h1>
-        <p>Opportunity is Chance</p>
-      </div>
-
-      <img src="images/spectrum.png" alt="spectrum image" class="img-thumbnail">
-
-      <!-- Facebook comment -->
-      <style>
-      /*facebook social plugin */
-      .fb-comments, .fb-comments iframe[style], .fb-comments span[style] {width: 100% !important;}
-      </style>
-
-      <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.3";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <div class="fb-comments" data-href="http://recycli.github.io" data-width="100%" data-numposts="5"></div>
-      <!-- /facebook comment -->
-      </div> <!-- /container -->
-
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+</div>
+</div>
