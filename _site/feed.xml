@@ -5,9 +5,41 @@
     <description></description>
     <link>http://recycli.github.io//</link>
     <atom:link href="http://recycli.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 Sep 2015 16:42:00 +0900</pubDate>
-    <lastBuildDate>Thu, 24 Sep 2015 16:42:00 +0900</lastBuildDate>
+    <pubDate>Sat, 26 Sep 2015 13:56:12 +0900</pubDate>
+    <lastBuildDate>Sat, 26 Sep 2015 13:56:12 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Chemistry of Chocolates</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/images/20150926/poster.png&quot; alt=&quot;Chemistry of Chocolates&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;서울과학고등학교 고급화학II 수행평가 포스터&lt;br /&gt;
+고화질 버전 : &lt;a href=&quot;/images/20150926/posterbig.png&quot;&gt;여기!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;본문 출처&lt;/strong&gt;&lt;br /&gt;
+[1] &lt;a href=&quot;https://en.wikipedia.org/wiki/Theobromine&quot;&gt;Theobromine&lt;/a&gt; — Wikipedia&lt;br /&gt;
+[2] &lt;a href=&quot;https://en.wikipedia.org/wiki/Caffeine&quot;&gt;Caffeine&lt;/a&gt; — Wikipedia&lt;br /&gt;
+[3] &lt;a href=&quot;https://en.wikipedia.org/wiki/Phenethylamine&quot;&gt;Phenylethylamine&lt;/a&gt; — Wikipedia&lt;br /&gt;
+[4] &lt;a href=&quot;https://en.wikipedia.org/wiki/Tryptophan&quot;&gt;Tryptophan&lt;/a&gt; — Wikipedia&lt;br /&gt;
+[5] &lt;a href=&quot;https://en.wikipedia.org/wiki/Anandamide&quot;&gt;Anandamide&lt;/a&gt; — Wikipedia&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;이미지 출처&lt;/strong&gt;&lt;br /&gt;
+[1] &lt;a href=&quot;http://annmariekostyk.com/wp-content/uploads/2010/09/Milk-Chocolate-Bar.jpg&quot;&gt;Chocolate-Bar&lt;/a&gt; : 배경의 초콜릿 이미지&lt;/p&gt;
+
+&lt;p&gt;출처가 표시되지 않은 내용은 자체 제작하였음.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Sep 2015 20:28:35 +0900</pubDate>
+        <link>http://recycli.github.io//miscellaneous/2015/09/26/chemistry-of-chocolates.html</link>
+        <guid isPermaLink="true">http://recycli.github.io//miscellaneous/2015/09/26/chemistry-of-chocolates.html</guid>
+        
+        <category>chemistry</category>
+        
+        <category>chocolate</category>
+        
+        
+        <category>miscellaneous</category>
+        
+      </item>
     
       <item>
         <title>test article</title>
@@ -20,6 +52,8 @@
 
 &lt;h3 id=&quot;section&quot;&gt;테스트용 글&lt;/h3&gt;
 
+&lt;p&gt;test&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;Stochastic gradient descent is a gradient descent optimization method for minimizing an objective function that is written as a sum of differentiable functions.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -27,17 +61,15 @@
 &lt;p&gt;When used to minimize the above function, a standard (or “batch”) gradient descent method would perform the following iterations :&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;w:=w-\eta\sum_{i=1}^{n}{\nabla Q_i(w)}&lt;/script&gt;
-
-&lt;p&gt;잘나오는듯(만족!)&lt;/p&gt;
 </description>
         <pubDate>Fri, 25 Sep 2015 01:35:32 +0900</pubDate>
-        <link>http://recycli.github.io//test/2015/09/25/test.html</link>
-        <guid isPermaLink="true">http://recycli.github.io//test/2015/09/25/test.html</guid>
+        <link>http://recycli.github.io//miscellaneous/2015/09/25/test.html</link>
+        <guid isPermaLink="true">http://recycli.github.io//miscellaneous/2015/09/25/test.html</guid>
         
         <category>test</category>
         
         
-        <category>test</category>
+        <category>miscellaneous</category>
         
       </item>
     
