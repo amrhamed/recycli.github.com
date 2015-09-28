@@ -4,15 +4,16 @@
     <head>
         <script type="text/javascript">
             function rgbcolor(r, g, b){
-                if ( r != 255             ) { r++;      }
-                if ( r == 255 && g != 255 ) { r=0; g++; }
-                if (             g == 255 ) { r=0; g=0; }
+                if ( g != 255             ) { g++;      }
+                if ( g == 255 && b != 255 ) { g=0; b++; }
+                if (             b == 255 ) { g=0; b=0; }
                 document.body.style.background = "rgb("+r+","+g+","+b+")";
-                var t = setTimeout(function(){rgbcolor(r, g, b)}, 33.333);
+                document.body.innerHTML = r+","+g+","+b;
+                var t = setTimeout(function(){rgbcolor(r, g, b)}, 33.333333);
             }
         </script>
     </head>
     
-    <body onload = "rgbcolor(0, 0, 0)"> </body>
+    <body text="#FFFFFF" onload = "rgbcolor(0, 0, 0)"> </body>
 
 </html>
