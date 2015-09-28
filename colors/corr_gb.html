@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script type="text/javascript">
+            function rgbcolor(r, g, b){
+                if ( r != 255             ) { r++;      }
+                if ( r == 255 && g != 255 ) { r=0; g++; }
+                if (             g == 255 ) { r=0; g=0; }
+                document.body.style.background = "rgb("+r+","+g+","+b+")";
+                var t = setTimeout(function(){rgbcolor(r, g, b)}, 33.333);
+            }
+        </script>
+    </head>
+    
+    <body onload = "rgbcolor(0, 0, 0)"> </body>
+
+</html>

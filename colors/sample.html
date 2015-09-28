@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function rgbcolor(flag1, flag2){
+                var color = null;
+                if (flag1 && flag2){
+                    var color = "red";
+                    flag2 = !flag2;
+                } else if (flag1 && !flag2){
+                    var color = "green";
+                    flag1 = !flag1;
+                } else {
+                    var color = "blue";
+                    flag1 = !flag1;
+                    flag2 = !flag2;
+                }
+                document.body.style.background = color;
+                var t = setTimeout(function(){rgbcolor(flag1, flag2)}, 33.333);
+            }
+        </script>
+    </head>
+    <body onload="rgbcolor(true, true)">
+    </body>
+</html>
