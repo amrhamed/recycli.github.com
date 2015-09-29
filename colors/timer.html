@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type='text/javascript' src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type='text/javascript'>
+        window.onload = function () {;
+                (function ($, window, document, undefined) {
+                    window.requestAnimationFrame = (function () {
+                        return (
+                            window.webkitRequestAnimationFrame ||
+                            window.mozRequestAnimationFrame ||
+                            window.oRequestAnimationFrame ||
+                            window.msRequestAnimaationFrame ||
+                            function (callback, element) {
+                                window.setTimeout(callback, 1000 / 30);
+                            }
+                        )
+                    })();
+
+                    window.performance = window.performance || {};
+                    performance.now = (function () {
+                        return performance.now ||
+                            performance.mozNow ||
+                            performance.msNow ||
+                            performance.oNow ||
+                            performance.webkitNow ||
+                            function () {
+                                return new Date().getTime();
+                            };
+                    })();
+                })(jQuery, window, document);
+
+
+                var $timer = $('#timer');
+
+                function timer() {
+                    $timer.text(performance.now())
+                    requestAnimationFrame(timer);
+                }
+
+                timer();
+            }
+    </script>
+
+</head>
+
+<body>
+    <p id="timer">0</p>
+
+</body>
+
+</html>
